@@ -182,15 +182,15 @@ class Commands:
         "An instance of Gazebo is not running"
         We loop as long as this message is outputted
         '''
-        while repeat:
-            process = subprocess.Popen(args, stdout=subprocess.PIPE, bufsize=0)
-            with process.stdout:
-                for line in iter(process.stdout.readline, b''):
-                    if not ("is not running" in line.decode()):
-                        repeat = False
-                        break
-                    else:
-                        print("Trying again")
+        #while repeat:
+        #    process = subprocess.Popen(args, stdout=subprocess.PIPE, bufsize=0)
+        #    with process.stdout:
+        #        for line in iter(process.stdout.readline, b''):
+        #            if not ("is not running" in line.decode()):
+        #                repeat = False
+        #                break
+        #            else:
+        #                print("Trying again")
 
 
     ## Reference service names for ROS2-
